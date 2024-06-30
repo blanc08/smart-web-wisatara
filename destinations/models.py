@@ -5,8 +5,8 @@ from django.db import models
 class Destination(models.Model):
     title = models.TextField()
     short = models.TextField()
-    provinsi = models.TextField()
-    kota = models.TextField()
+    province = models.TextField()
+    city = models.TextField()
     body = models.TextField()
     thumbnail = models.TextField()
 
