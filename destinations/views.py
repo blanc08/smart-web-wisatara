@@ -2,7 +2,6 @@ from django.core.paginator import Paginator
 from django.http import HttpRequest
 from django.shortcuts import render
 from destinations.models import Destination
-from news.models import News
 
 
 def index(request):
@@ -20,5 +19,8 @@ def index(request):
 
 
 def detail(request: HttpRequest, id: int):
-    data = News.objects.filter(id=id).get()
-    return render(request, "destination/detail.html", {"data": data})
+    data = Destination.objects.filter(id=id).first()
+    if data == None:
+        return render(request, "destination/detail/index.html", {"data": data})
+
+    return render(request, "destination/detail/index.html", {"data": data})

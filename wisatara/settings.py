@@ -78,11 +78,11 @@ WSGI_APPLICATION = "wisatara.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "mercubuana_smart_web",
-        "USER": "superuserdev",
-        "PASSWORD": "passwordpostgresdev",
-        "HOST": "localhost",
-        "PORT": "",  # Set to empty string for default
+        "NAME": "postgres",
+        "USER": "postgres.udgncrrkirmigxuclyzq",
+        "PASSWORD": "VTxmQWR&LPX+67h",
+        "HOST": "aws-0-ap-southeast-1.pooler.supabase.com",
+        "PORT": "6543",  # Set to empty string for default
     }
 }
 
