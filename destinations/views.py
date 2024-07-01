@@ -10,9 +10,11 @@ def index(request):
     city = request.GET.get("city")
     news = Destination.objects.filter(city=city).all()
     paginator = Paginator(news, 10)
-    print("paginator", paginator)
 
     page_obj = paginator.get_page(page_number)
+
+    if city != None:
+        return render(request, f"destination/{city}.html", {"page_obj": page_obj})
 
     return render(request, "destination/index.html", {"page_obj": page_obj})
 
